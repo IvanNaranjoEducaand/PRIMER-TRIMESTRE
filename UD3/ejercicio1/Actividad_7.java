@@ -18,6 +18,7 @@ public class Actividad_7 {
 		        System.out.println(num + "-> no primo");
 		      }
 	}
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -27,5 +28,10 @@ public class Actividad_7 {
 		num = sc.nextInt();
 		
 		primos(num);
+		sc.close();
 	}
 }
+
+
+
+

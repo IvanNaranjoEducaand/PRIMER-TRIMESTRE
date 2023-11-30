@@ -9,6 +9,9 @@ public class Actividad2 {
 		String[] original = new String[8];
 		String[] coloresConocidos = {"verde", "rojo", "azul", "amarillo", "naranja", "rosa", "negro", "blanco", "morado"};
 		String[] resultado = new String[8];
+		boolean contiene;
+		int posColores = 0;
+		int posResto = 7;
 		
 		for(int i = 0; i < original.length; i++) {
 			
@@ -17,6 +20,27 @@ public class Actividad2 {
 			
 			palabra.toLowerCase();
 			original[i] = palabra;
+			
+		}
+		
+		for(int i = 0; i < original.length; i++) {
+			contiene = false;
+			for(int j = 0; j < coloresConocidos.length; j++) {
+				if(original[i].equals(coloresConocidos[j])){
+					contiene = true;
+				}
+			}
+			if(contiene) {
+				resultado[posColores] = original[i];
+				posColores++;
+			} else {
+				resultado[posResto] = original[i];
+				posResto--;
+			}
+		}
+		
+		for(int k = 0; k < resultado.length; k++){
+			System.out.print(resultado[k]+" ");
 		}
 		
 	}
